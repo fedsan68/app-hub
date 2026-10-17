@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f172a" />
+  <title>App Hub — mina appar</title>
+  <meta name="description" content="Samlingssida för mina webbappar: Where Did I Put It och Note Taker." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <main class="wrap">
+    <header class="hero">
+      <span class="badge">🚀 App Hub</span>
+      <h1>Mina appar</h1>
+      <p class="lead">Små, snabba webbappar som löser vardagsproblem. Klicka på en box för att öppna.</p>
+    </header>
+
+    <section class="grid" aria-label="Appar">
+
+      <a class="card card--cyan" href="https://where-did-i-put-it.onrender.com/" target="_blank" rel="noopener">
+        <div class="card__top">
+          <span class="card__icon" aria-hidden="true">📦</span>
+          <span class="card__tag">Förvaring</span>
+        </div>
+        <h2 class="card__title">Where Did I Put It</h2>
+        <p class="card__desc">
+          Håll koll på var dina saker finns. Lägg in prylar, plats och bild — sök fram dem
+          på sekunden nästa gång du letar.
+        </p>
+        <ul class="card__meta">
+          <li>🔍 Snabbsök</li>
+          <li>📸 Bilder</li>
+          <li>🔐 Inloggning</li>
+        </ul>
+        <span class="card__cta">Öppna appen <span class="arrow" aria-hidden="true">→</span></span>
+      </a>
+
+      <a class="card card--amber" href="https://note-taker-app-p4cw.onrender.com/" target="_blank" rel="noopener">
+        <div class="card__top">
+          <span class="card__icon" aria-hidden="true">📝</span>
+          <span class="card__tag">Anteckningar</span>
+        </div>
+        <h2 class="card__title">Note Taker</h2>
+        <p class="card__desc">
+          Dina anteckningar, alltid nära till hands. Skriv snabbt, tagga och filtrera —
+          enkelt nog att faktiskt användas varje dag.
+        </p>
+        <ul class="card__meta">
+          <li>🏷️ Taggar</li>
+          <li>⚡ Snabbt</li>
+          <li>🔐 Inloggning</li>
+        </ul>
+        <span class="card__cta">Öppna appen <span class="arrow" aria-hidden="true">→</span></span>
+      </a>
+
+    </section>
+
+    <footer class="foot">
+      <p>Byggd av <a href="https://github.com/fedsan68" target="_blank" rel="noopener">fedsan68</a> · Hostad på Render</p>
+    </footer>
+  </main>
+</body>
+</html>
