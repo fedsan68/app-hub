@@ -2,6 +2,8 @@
 
 En liten landningssida som samlar mina webbappar i snygga, klickbara boxar.
 
+**Live:** https://app-hub-xl8n.onrender.com/
+
 ## Appar
 
 | App | Beskrivning | Länk |
@@ -26,24 +28,29 @@ python3 -m http.server 8000
 # öppna http://localhost:8000
 ```
 
-## Deploya på Render
+## Deploy
 
-### Alternativ A — Blueprint (rekommenderas)
+Sidan är deployad på Render som en **static site** via Blueprint (`render.yaml`).
 
-1. Gå till https://dashboard.render.com/blueprints → **New Blueprint Instance**
-2. Välj repot `fedsan68/app-hub`
-3. Render läser `render.yaml` och skapar static site-tjänsten → **Apply**
+- **Blueprint:** `app-hub` (ID `exs-db9pk4bbc2fs73cpa7m0`)
+- **Service:** `app-hub` · runtime `static` · region Global
 
-### Alternativ B — Manuellt
+### ⚠️ Auto-deploy är inte aktivt
 
-1. https://dashboard.render.com → **New** → **Static Site**
-2. Välj repot `fedsan68/app-hub`
-3. Inställningar:
-   - **Build Command:** lämna tomt
-   - **Publish Directory:** `.`
-4. **Create Static Site**
+Repot är kopplat som **public Git repository URL**, eftersom Render-appen på GitHub
+bara har åtkomst till `note-taker-app` och `where-did-i-put-it`. Med den kopplingen
+stödjer Render inte auto-deploy eller PR Previews.
 
-Varje push till `main` deployar automatiskt.
+**Efter en push måste du trycka "Manual sync"** i Render-dashboarden:
+https://dashboard.render.com/blueprint/exs-db9pk4bbc2fs73cpa7m0/syncs
+
+### Aktivera auto-deploy (engångsjobb)
+
+1. Öppna https://github.com/apps/render/installations/new (kräver GitHub-inloggning)
+2. Välj kontot `fedsan68` → lägg till repot **app-hub** bland "Only select repositories"
+3. I Render: **Settings** på tjänsten → koppla om repot till GitHub-kopplingen
+
+Därefter deployar varje push till `main` automatiskt.
 
 ## Lägga till en ny app
 
